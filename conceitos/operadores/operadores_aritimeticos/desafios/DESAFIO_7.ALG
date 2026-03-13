@@ -1,4 +1,4 @@
-Algoritmo "desafio_7"
+Algoritmo "07-comissao"
 
 
 
@@ -22,7 +22,7 @@ Inicio
       
       // saida
       
-      escreval("sua comissão de 5%")
+      escreval("sua comissï¿½o de 5%")
       escreval( " R$: ", valor_da_comissao)
 
 

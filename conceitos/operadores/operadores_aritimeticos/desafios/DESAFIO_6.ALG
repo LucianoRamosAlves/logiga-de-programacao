@@ -1,4 +1,4 @@
-Algoritmo "desafio_6"
+Algoritmo "06-dividir-conta"
 
 
 

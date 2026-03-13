@@ -1,4 +1,4 @@
-Algoritmo "desafio_1"
+Algoritmo "01-troco"
 
 
 Var

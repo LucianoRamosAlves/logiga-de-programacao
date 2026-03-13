@@ -1,4 +1,4 @@
-Algoritmo "desafio_3"
+Algoritmo "03-meses"
 
 
 
@@ -18,7 +18,7 @@ Inicio
       
       meses <- anos * 12
       
-      escreval("olá sua idade de ", anos, " anos ", "são ", meses, " meses")
+      escreval("olï¿½ sua idade de ", anos, " anos ", "sï¿½o ", meses, " meses")
 
 
 Fimalgoritmo

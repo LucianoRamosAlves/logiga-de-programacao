@@ -1,4 +1,4 @@
-Algoritmo "desafio_4"
+Algoritmo "04-horas-trabalhados"
 
 
 
@@ -25,7 +25,7 @@ Inicio
       
       // saida
       
-      escreval("voçe trabalhou ",horas_trabalhadas , " horas de trabalho")
+      escreval("voï¿½e trabalhou ",horas_trabalhadas , " horas de trabalho")
       escreval("tem a receber ", " R$: ", valor_pago:2:2)
 
 

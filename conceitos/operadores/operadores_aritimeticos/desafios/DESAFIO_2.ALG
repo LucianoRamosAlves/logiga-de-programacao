@@ -1,4 +1,4 @@
-Algoritmo "desafio_2"
+Algoritmo "02-conven√ßao-minutos"
 
 
 
@@ -18,7 +18,7 @@ Inicio
       
       minutos <- horas * 60
       
-      escreval( horas , " horas em minutos s„o, ", minutos, " minutos")
+      escreval( horas , " horas em minutos sÔøΩo, ", minutos, " minutos")
 
 
 Fimalgoritmo

@@ -1,4 +1,4 @@
-Algoritmo "desafio_5"
+Algoritmo "05-desconto"
 
 
 

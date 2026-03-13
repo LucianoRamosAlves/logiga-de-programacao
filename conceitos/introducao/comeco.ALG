@@ -1,7 +1,7 @@
-Algoritmo "passo_1"
-// Disciplina   : [Linguagem e Lógica de Programação]
+Algoritmo "introducao"
+// Disciplina   : [Linguagem e Lï¿½gica de Programaï¿½ï¿½o]
 // Professor   : Antonio Carlos Nicolodi 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Descriï¿½ï¿½o   : Aqui vocï¿½ descreve o que o programa faz! (funï¿½ï¿½o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 25/02/2026
 Var
@@ -10,7 +10,7 @@ nome: caractere
 
 
 Inicio
-escreva("olá mundo")
+escreva("olï¿½ mundo")
 escreval("esse pula linha")
 escreval("linha pulada")
 espaco_guardaRoupa <- "Toalha"
@@ -18,6 +18,6 @@ escreval( espaco_guardaRoupa)
 
 escreval("digite seu nome:")
 leia(nome)
-escreval("olá, muito prazer " + nome + "!")
+escreval("olï¿½, muito prazer " + nome + "!")
 
 Fimalgoritmo
