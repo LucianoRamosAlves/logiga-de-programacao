@@ -1,4 +1,4 @@
-Algoritmo "ex_01"
+Algoritmo "01-vacina"
 
 
 Var
@@ -14,7 +14,7 @@ Inicio
 
       // processamento
        se (idade >= 67) entao
-          escreval(" voce já pode ser vacinada")
+          escreval(" voce jï¿½ pode ser vacinada")
           
        senao
 
