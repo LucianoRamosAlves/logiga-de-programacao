@@ -14,6 +14,9 @@ i: inteiro
 tipo_conta: inteiro
 valor_dinheiro: real
 troco: real
+erro_pagamento: inteiro
+valor_complemento: real
+falta_pagamento: real
 
 
 // valor de cada intem
@@ -246,33 +249,86 @@ Inicio
                   
                   caso 4
                   limpatela
-                  repita
                   escreval(">>>>> Pagamento Dinheiro, R$:", conta)
                   escreval("Valor pago em Dinheiro")
                   leia(valor_dinheiro)
                   troco <- valor_dinheiro - conta
+                  falta_pagamento <- conta - valor_dinheiro
                   escreval()
+                  
+
+                            repita
+                            valor_dinheiro <- valor_dinheiro + valor_complemento
                             se (valor_dinheiro < conta) entao
                             limpatela
                             escreval("Opss! Valor insuficiente")
                             escreval(" Pendência de R$:", troco)
                             escreval()
                             escreval(" ERRO NO PAGAMENTO ")
+                            escreval()
+                            escreval(" Proximo passo")
                             
+                            
+                            
+                            escreval("1 - completar pagamento")
+                            escreval("2 - finalizar seção")
+                            leia(erro_pagamento)
+                            
+                            
+                            escolha erro_pagamento
+                                    caso 1
+                                    limpatela
+                                    escreval("total pendente", troco)
+                                    escreval("valor pago")
+                                    leia(valor_complemento)
+
+
+
+                                    
+                                    se ( valor_complemento = falta_pagamento) entao
+                                    escreval("Pagamento Realizado")
+                                    escreval(" Volte Sempre!")
+                                    senao
+
+
+                                    
+                                    se ( valor_complemento > falta_pagamento) entao
+                                    troco <- valor_complemento - falta_pagamento
+                                    escreval("Troco do Cliente:")
+                                    escreval("total Pendência:", troco)
+                                    escreval("Valor Pago Anteriomente",valor_dinheiro )
+                                    escrevaL("Valor Pago Complemento",valor_complemento)
+                                    escreval(" Troco:", troco)
+                                    escreval("Pagamento Realizado")
+
+
+                                    senao
+                                    limpatela
+                                    escreval(" Ainda Pedente!")
+                                    escreval("valor de ", troco)
+                                    escreval(" ERRO NO PAGAMENTO ")
+                                    
+                                    fimse
+                                    fimse
+                             fimescolha
+                             
+                             
+                             
                             senao
-                            se (valor_dinheiro = conta) entao
+                            se ( valor_complemento = falta_pagamento) entao
                             escreval("Pagamento Realizado")
                             escreval(" Volte Sempre!")
-                            
-                            senao
+                            fimse
+                            fimse
+                          ate (valor_dinheiro >= conta)
+                          
+                          se (valor_dinheiro > conta) entao
                             escreval("Troco do Cliente:")
                             escreval(" total CONTA:", conta)
                             escreval("Valor Pago",valor_dinheiro )
                             escreval(" Troco:", troco)
                             escreval("Pagamento Realizado")
                             fimse
-                            fimse
-                  ate (valor_dinheiro >= conta)
       fimescolha
       fimse
 
