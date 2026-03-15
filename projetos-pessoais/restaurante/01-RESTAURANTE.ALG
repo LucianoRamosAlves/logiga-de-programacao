@@ -12,6 +12,8 @@ parcelar: caractere
 q_parcelas: inteiro
 i: inteiro
 tipo_conta: inteiro
+valor_dinheiro: real
+troco: real
 
 
 // valor de cada intem
@@ -241,7 +243,36 @@ Inicio
                   conta <- 95 * conta / 100
                   escreval(">>>>> Pagamento Pix, Desconto de 5% <<<<<")
                   escreval(" Total a pagar R$: ", conta)
-      
+                  
+                  caso 4
+                  limpatela
+                  repita
+                  escreval(">>>>> Pagamento Dinheiro, R$:", conta)
+                  escreval("Valor pago em Dinheiro")
+                  leia(valor_dinheiro)
+                  troco <- valor_dinheiro - conta
+                  escreval()
+                            se (valor_dinheiro < conta) entao
+                            limpatela
+                            escreval("Opss! Valor insuficiente")
+                            escreval(" Pendência de R$:", troco)
+                            escreval()
+                            escreval(" ERRO NO PAGAMENTO ")
+                            
+                            senao
+                            se (valor_dinheiro = conta) entao
+                            escreval("Pagamento Realizado")
+                            escreval(" Volte Sempre!")
+                            
+                            senao
+                            escreval("Troco do Cliente:")
+                            escreval(" total CONTA:", conta)
+                            escreval("Valor Pago",valor_dinheiro )
+                            escreval(" Troco:", troco)
+                            escreval("Pagamento Realizado")
+                            fimse
+                            fimse
+                  ate (valor_dinheiro >= conta)
       fimescolha
       fimse
 
