@@ -57,7 +57,7 @@ Inicio
       conta <- 0
        repita
       escreval("**** RESTAURANTE ****")
-       repita
+      repita
       escreval("Cardápio")
       escreval()
       escreval(" 1 - Hambúrguer -R$: ", v_hamburguer )
@@ -77,6 +77,7 @@ Inicio
               escreval(quantidade," pedido de Hambúrguer Adiconado ")
               q_hamburguer <- q_hamburguer + quantidade
               conta <- conta + v_hamburguer * quantidade
+              invalid <- 1
 
               caso 2
               escreval(" Quantidades de pizza ?" )
@@ -84,6 +85,7 @@ Inicio
               escreval(quantidade," pedido Pizza Adiconado ")
               q_pizza <- q_pizza + quantidade
               conta <- conta + v_pizza * quantidade
+              invalid <- 1
 
               caso 3
               escreval(" Quantidades de Refrigerante ?" )
@@ -91,6 +93,7 @@ Inicio
               escreval(quantidade," pedido de Refrigerante Adiconado ")
               q_refrigerante <- q_refrigerante + quantidade
               conta <- conta + v_refrigerante * quantidade
+              invalid <- 1
 
               caso 4
               escreval(" Quantidades de Suco ?" )
@@ -98,6 +101,7 @@ Inicio
               escreval(quantidade," pedido de Suco Adiconado ")
               q_suco <- q_suco + quantidade
               conta <- conta + v_suco * quantidade
+              invalid <- 1
 
               caso 5
               escreval(" Quantidades de Sobremesa ?" )
@@ -105,11 +109,13 @@ Inicio
               escreval(quantidade," pedido Sobremesa Adiconado ")
               q_sobremesa <- q_sobremesa + quantidade
               conta <- conta + v_Sobremesa * quantidade
+              invalid <- 1
               
               
               outrocaso
               invalid <- 0
               escreval(" Opss! opção invalida")
+              escreval(" Refaça a Operação ")
       fimescolha
        ate ( invalid <> 0)
       escreval("Fechar a Conta ? [S] ou [N]")
