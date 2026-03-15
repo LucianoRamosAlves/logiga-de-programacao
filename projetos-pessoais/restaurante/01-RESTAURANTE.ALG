@@ -17,6 +17,7 @@ troco: real
 erro_pagamento: inteiro
 valor_complemento: real
 falta_pagamento: real
+invalid: inteiro
 
 
 // valor de cada intem
@@ -56,7 +57,7 @@ Inicio
       conta <- 0
        repita
       escreval("**** RESTAURANTE ****")
-
+       repita
       escreval("Cardápio")
       escreval()
       escreval(" 1 - Hambúrguer -R$: ", v_hamburguer )
@@ -69,7 +70,6 @@ Inicio
       leia(pedido)
       escreval()
       limpatela
-
       escolha pedido
               caso 1
               escreval(" Quantidades de Hambúrguer ?" )
@@ -106,11 +106,12 @@ Inicio
               q_sobremesa <- q_sobremesa + quantidade
               conta <- conta + v_Sobremesa * quantidade
               
+              
               outrocaso
+              invalid <- 0
               escreval(" Opss! opção invalida")
-
-
       fimescolha
+       ate ( invalid <> 0)
       escreval("Fechar a Conta ? [S] ou [N]")
       leia(fechar_conta)
 
@@ -325,29 +326,6 @@ Inicio
 
       fimescolha
 
-
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
 
 
       senao
