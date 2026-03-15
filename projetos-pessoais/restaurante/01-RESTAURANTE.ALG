@@ -320,6 +320,13 @@ Inicio
                             escreval(" Volte Sempre!")
                             fimse
                             fimse
+                            
+                            caso 2
+                            escreval("Finalizando programa")
+                            escreval("errro ao pagamento")
+                            Fimalgoritmo
+                            
+                            
                           ate (valor_dinheiro >= conta)
                           
                           se (valor_dinheiro > conta) entao
@@ -329,6 +336,7 @@ Inicio
                             escreval(" Troco:", troco)
                             escreval("Pagamento Realizado")
                             fimse
+                            
       fimescolha
       fimse
 
