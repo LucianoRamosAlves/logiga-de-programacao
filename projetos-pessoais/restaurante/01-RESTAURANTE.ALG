@@ -150,21 +150,204 @@ Inicio
       escreval(" Deseja colaborar com os 10% ?")
       leia(colaborar)
       
+      
+      
       se (colaborar = "S" ) ou ( colaborar = "s") entao
       limpatela
          conta <- 110 * conta / 100
          escreval("------conta fechada>>>> Com 10%, total, R$:", conta)
+         escreval("------conta fechada>>>> total, R$:", conta)
+         escreval()
+         escreval("Formas de Pagamentos")
+         escreval("1 - Debito > sem taxa")
+         escreval("2 - Crédito > Taxa 1%")
+         escreval("3 - Pix > Desconto de 5%")
+         escreval("4 - Dinheiro > sem taxa")
+         escreval()
+         leia(forma_pagamento)
+         escolha forma_pagamento
+                       caso 1
+              limpatela
+              escreval(">>>>> Pagamento Débito, R$:", conta)
+
+              caso 2
+              limpatela
+              conta <- 101 * conta / 100
+              escreval(">>>>> Pagamento Crédito, R$:", conta)
+              escreval()
+              escreval(" Deseja Parcelar ?, Até 3 vezes!")
+              leia(parcelar)
+                            repita
+                            se (parcelar = "S") ou (parcelar = "s") entao
+                            escreval("Quantidade de Parcelas")
+                            leia(q_parcelas)
+                            escreval()
+                            escreval("1- conta resumida")
+                            escreval("2- conta detalhada")
+                            leia(tipo_conta)
+
+                            escolha tipo_conta
+                                    caso 1
+                                     limpatela
+
+                                    se (q_parcelas > 0) e (q_parcelas <= 3) entao
+                                        conta <- conta / q_parcelas
+                                        escreval(q_parcelas, " vezes de: R$ ", conta)
+
+                                     senao
+                                            limpatela
+                                            escreval("Opss!, quantidade de parcela não aceita!")
+
+                                      fimse
+
+                                    caso 2
+                                       limpatela
+                                      se (q_parcelas > 0) e (q_parcelas <= 3) entao
+                                         conta <- conta / q_parcelas
+                                         i <- 1
+                                      enquanto (i <= q_parcelas )faca
+
+                                               escreval(i, " parcela valor R$:", conta)
+                                               i <- i + 1
+                                       fimenquanto
+
+                                       senao
+                                            limpatela
+                                            escreval("Opss!, quantidade de parcela não aceita!")
+
+
+                                       fimse
+                            fimescolha
+
+                            senao
+                            limpatela
+                            escreval(">>> Á Vista <<<")
+                            escreval(" Total a Pagar R$: ", conta)
+                            fimse
+                            ate (q_parcelas <= 3)
+
+
+                  caso 3
+                  limpatela
+                  conta <- 95 * conta / 100
+                  escreval(">>>>> Pagamento Pix, Desconto de 5% <<<<<")
+                  escreval(" Total a pagar R$: ", conta)
+
+                  caso 4
+                  limpatela
+                  escreval(">>>>> Pagamento Dinheiro, R$:", conta)
+                  escreval("Valor pago em Dinheiro")
+                  leia(valor_dinheiro)
+                  troco <- valor_dinheiro - conta
+                  falta_pagamento <- conta - valor_dinheiro
+                  escreval()
+                  
+                            repita
+                            valor_dinheiro <- valor_dinheiro + valor_complemento
+                            se (valor_dinheiro < conta) entao
+                            limpatela
+                            escreval("Opss! Valor insuficiente")
+                            escreval(" Pendência de R$:", troco)
+                            escreval()
+                            escreval(" ERRO NO PAGAMENTO ")
+                            escreval()
+                            escreval(" Proximo passo")
+
+
+
+                            escreval("1 - completar pagamento")
+                            escreval("2 - finalizar seção")
+                            leia(erro_pagamento)
+
+
+                            escolha erro_pagamento
+                                    caso 1
+                                    limpatela
+                                    escreval("total pendente", troco)
+                                    escreval("valor pago")
+                                    leia(valor_complemento)
 
 
 
 
+                                    se ( valor_complemento = falta_pagamento) entao
+                                    escreval("Pagamento Realizado")
+                                    escreval(" Volte Sempre!")
+                                    senao
+
+
+
+                                    se ( valor_complemento > falta_pagamento) entao
+                                    troco <- valor_complemento - falta_pagamento
+                                    escreval("Troco do Cliente:")
+                                    escreval("total Pendência:", troco)
+                                    escreval("Valor Pago Anteriomente",valor_dinheiro )
+                                    escrevaL("Valor Pago Complemento",valor_complemento)
+                                    escreval(" Troco:", troco)
+                                    escreval("Pagamento Realizado")
+
+
+                                    senao
+                                    limpatela
+                                    escreval(" Ainda Pedente!")
+                                    escreval("valor de ", troco)
+                                    escreval(" ERRO NO PAGAMENTO ")
+
+                                    fimse
+                                    fimse
+
+                                    caso 2
+                                    escreval("Finalizando programa")
+                                    escreval("errro ao pagamento")
+                                    Fimalgoritmo
+                             fimescolha
+                             
+
+                            senao
+                            se ( valor_complemento = falta_pagamento) entao
+                            escreval("Pagamento Realizado")
+                            escreval(" Volte Sempre!")
+                            fimse
+                            fimse
+
+                            ate (valor_dinheiro >= conta)
 
 
 
 
+                          se (valor_dinheiro > conta) e (erro_pagamento = 0) entao
+                            escreval("Troco do Cliente:")
+                            escreval(" total CONTA:", conta)
+                            escreval("Valor Pago",valor_dinheiro )
+                            escreval(" Troco:", troco)
+                            escreval("Pagamento Realizado")
+                            fimse
+
+      fimescolha
 
 
-
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
 
 
       senao
@@ -178,7 +361,6 @@ Inicio
       escreval("4 - Dinheiro > sem taxa")
       escreval()
       leia(forma_pagamento)
-      
       escolha forma_pagamento
               caso 1
               limpatela
@@ -310,6 +492,11 @@ Inicio
                                     
                                     fimse
                                     fimse
+                                    
+                                    caso 2
+                                    escreval("Finalizando programa")
+                                    escreval("errro ao pagamento")
+                                    Fimalgoritmo
                              fimescolha
                              
                              
@@ -321,15 +508,12 @@ Inicio
                             fimse
                             fimse
                             
-                            caso 2
-                            escreval("Finalizando programa")
-                            escreval("errro ao pagamento")
-                            Fimalgoritmo
+                            ate (valor_dinheiro >= conta)
                             
                             
-                          ate (valor_dinheiro >= conta)
+                            
                           
-                          se (valor_dinheiro > conta) entao
+                          se (valor_dinheiro > conta) e (erro_pagamento = 0) entao
                             escreval("Troco do Cliente:")
                             escreval(" total CONTA:", conta)
                             escreval("Valor Pago",valor_dinheiro )
