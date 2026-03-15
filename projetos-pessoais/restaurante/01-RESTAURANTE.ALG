@@ -18,6 +18,7 @@ erro_pagamento: inteiro
 valor_complemento: real
 falta_pagamento: real
 invalid: inteiro
+finalizar: caractere
 
 
 // valor de cada intem
@@ -421,8 +422,6 @@ Inicio
                   troco <- valor_dinheiro - conta
                   falta_pagamento <- conta - valor_dinheiro
                   escreval()
-                  
-
                             repita
                             valor_dinheiro <- valor_dinheiro + valor_complemento
                             se (valor_dinheiro < conta) entao
@@ -434,13 +433,11 @@ Inicio
                             escreval()
                             escreval(" Proximo passo")
                             
-                            
-                            
                             escreval("1 - completar pagamento")
                             escreval("2 - finalizar seção")
                             leia(erro_pagamento)
-                            
-                            
+                                     repita
+                                     finalizar <- "n"
                             escolha erro_pagamento
                                     caso 1
                                     limpatela
@@ -448,12 +445,11 @@ Inicio
                                     escreval("valor pago")
                                     leia(valor_complemento)
 
-
-
                                     
                                     se ( valor_complemento = falta_pagamento) entao
                                     escreval("Pagamento Realizado")
                                     escreval(" Volte Sempre!")
+
                                     senao
 
 
@@ -468,25 +464,34 @@ Inicio
                                     escreval("Pagamento Realizado")
 
 
+
                                     senao
                                     limpatela
                                     escreval(" Ainda Pedente!")
                                     escreval("valor de ", troco)
                                     escreval(" ERRO NO PAGAMENTO ")
+
                                     
                                     fimse
                                     fimse
-                                    
+
                                     caso 2
-                                    escreval("Finalizando programa")
-                                    escreval("errro ao pagamento")
-                                    Fimalgoritmo
+                                    escreval(" Tem Certeza que Deseja Finalizar [S] ou [N]")
+                                    leia(finalizar)
+                                     se (finalizar = "s") ou (finalizar = "S") entao
+                                     limpatela
+                                    escreval("erro ao pagamento")
+                                    escreval("PAGAMENTO Pendente")
+                                    fimalgoritmo
+                                    fimse
                              fimescolha
-                             
+                             ate (finalizar = "n") ou (finalizar = "N")
+
+
                              
                              
                             senao
-                            se ( valor_complemento = falta_pagamento) entao
+                            se ( valor_complemento = falta_pagamento)e (erro_pagamento = 0) entao
                             escreval("Pagamento Realizado")
                             escreval(" Volte Sempre!")
                             fimse
