@@ -20,14 +20,16 @@ q_valor: inteiro
 v_valor :real
 destinatario: caractere
 t_confirma: caractere
+senha_antiga: inteiro
+nova_senha: inteiro
 
 
 
 Inicio
 
 // validando usuario
-    login_correto <- "lulu"
-    senha_correta <- 123
+   login_correto <- "lulu"
+   senha_correta <- 123
 
    // tela de login
    repita
@@ -220,7 +222,24 @@ Inicio
                       escreval("______________________________________")
 
 
+                      caso 6
+                      limpatela
+                      escreval("----- Alterar Senha -----")
+                      escreval()
+                      escreval("Digite a nova senha")
+                      leia(nova_senha)
+                      escreval()
+                      escreval("Digite a senha antiga")
+                      leia(senha_antiga)
                       
+                      se (senha_antiga = senha_correta)entao
+                         senha_correta <- nova_senha
+                         escreval("----- Senha Alterado -----")
+                         escreval("****** SUSCESSO *******")
+                         
+                      senao
+                      escreval("opss!, Senha invalida")
+                      fimse
                       
                       
                       caso 7
@@ -246,30 +265,6 @@ Inicio
 
 
      ate (opcao = 7 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
    senao
    
