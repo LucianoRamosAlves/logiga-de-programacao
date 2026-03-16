@@ -113,10 +113,11 @@ Projeto desenvolvido para fins educacionais na disciplina de **Lógica de Progra
 ## 🚀 Possíveis Melhorias Futuras
 
 Algumas melhorias que poderiam ser implementadas:
-
+- Refinamento estrutura logica
+- Correções de bugs
+- Validações extras
 - Separação do código em procedimentos
 - Interface gráfica
-- Banco de dados de pedidos
 - Mais itens no cardápio
 - Sistema de mesas
 - Relatório de vendas
