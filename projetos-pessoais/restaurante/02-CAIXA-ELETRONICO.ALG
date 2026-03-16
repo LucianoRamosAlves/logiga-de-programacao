@@ -18,6 +18,8 @@ V_sacar_dinheiro: real
 t_valor: real
 q_valor: inteiro
 v_valor :real
+destinatario: caractere
+t_confirma: caractere
 
 
 
@@ -158,8 +160,19 @@ Inicio
                       limpatela
                       escreval("----- Transferir Valor -----")
                       escreval()
+                      escreva(" Nome do Destinatario ")
+                      leia(destinatario)
                       escreval("Informe o Valor")
                       leia(t_valor)
+                      
+                      escreval(" Revise e confirme a operação ")
+                      escreva()
+                      escreval("Nome Destinatario: ", destinatario)
+                      escreval("Valor RS: ", t_valor)
+                      escreval()
+                      escreval(" CONFIRMAR OPERAÇÃO [S] / [N] ")
+                      leia(t_confirma)
+                      
 
                       se ( t_valor > saldo ) entao
                       limpatela
@@ -179,10 +192,12 @@ Inicio
                       escreval("_________________")
 
                       senao
+                      se (t_confirma = "s") ou (t_confirma = "S")  entao
                       v_valor <- v_valor + t_valor
                       saldo <- saldo - t_valor
                       q_valor <- q_valor + 1
                       escreval("^^^^ transferencia Realizada ^^^^^^")
+                      fimse
                       fimse
                       fimse
                       
