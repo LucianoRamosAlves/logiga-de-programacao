@@ -18,6 +18,9 @@ Inicio
    // tela de login
    repita
    escreval("------------ area de login -----------")
+   
+
+   repita
    escreval(" por favor ! infomre seu login e senha")
    escreval(" Digite seu login ")
    leia(login)
@@ -36,61 +39,48 @@ Inicio
    ate (confirmar = "S" ) ou  (confirmar = "s" )
    limpatela
    
+
    se (login = login_correto) e ( senha = senha_correta ) entao
    escreval(" Acesso ok ")
+   fimalgoritmo
    senao
    
 // validando tentativa
-             tentativa <- tentativa + 1
-             repita
+            tentativa <- tentativa + 1
             se tentativa = 1 entao
             limpatela
             escreval("---- SENHA OU USUARIO INVALIDO ----")
             escreval("***** restam 2 Tentativas *****")
-            tentativa <- tentativa + 1
-            escreval(" por favor ! infomre seu login e senha")
-            escreval(" Digite seu login ")
-            leia(login)
-            escreval(" digite sua senha ")
-            leia(senha)
-            escreval()
+            tentativa <- tentativa - 1  + 1
             senao
             
              se tentativa = 2 entao
              limpatela
              escreval("---- SENHA OU USUARIO INVALIDO ----")
              escreval("***** resta 1 Tentativa *****")
-             tentativa <- tentativa + 1
-             escreval(" por favor ! infomre seu login e senha")
-             escreval(" Digite seu login ")
-             leia(login)
-             escreval(" digite sua senha ")
-             leia(senha)
-             escreval()
+             tentativa <- tentativa - 1 + 1
             senao
             
              se tentativa = 3 entao
              limpatela
              escreval("---- SENHA OU USUARIO INVALIDO ----")
              escreval("***** ultima tentativa *****")
-             tentativa <- tentativa + 1
-             escreval(" por favor ! infomre seu login e senha")
-             escreval(" Digite seu login ")
-             leia(login)
-             escreval(" digite sua senha ")
-             leia(senha)
-             escreval()
+             tentativa <- tentativa - 1 + 1
                
              fimse
              fimse
              fimse
-             ate tentativa > 3
-             se tentativa = 4 entao
-             limpatela
-                escreval("^^^^^^^ USUARIO BLOQUEADO ^^^^^^^^")
-                escreval()
-                escreval("entre em contato")
-                Fimalgoritmo
-             fimse
+
+
    fimse
+   ate tentativa > 3
+   
+   
+         se tentativa = 4 entao
+         limpatela
+         escreval("^^^^^^^ USUARIO BLOQUEADO ^^^^^^^^")
+         escreval()
+         escreval("entre em contato")
+         Fimalgoritmo
+         fimse
 Fimalgoritmo
