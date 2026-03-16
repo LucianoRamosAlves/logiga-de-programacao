@@ -7,6 +7,10 @@ senha: inteiro
 confirmar: caractere
 login_correto: caractere
 senha_correta: inteiro
+opcao: inteiro
+saldo: real
+depositar_dinheiro: real
+sacar_dinheiro: real
 
 
 Inicio
@@ -27,7 +31,7 @@ Inicio
    escreval(" digite sua senha ")
    leia(senha)
    escreval()
-   
+   limpatela
    escreval("Verifique e confirme seus dados abaixo.")
    escreval()
    escreval(" Nome login: ", login)
@@ -41,8 +45,62 @@ Inicio
    
 
    se (login = login_correto) e ( senha = senha_correta ) entao
-   escreval(" Acesso ok ")
-   fimalgoritmo
+   escreval("========== CAIXA ELETRONICA =============")
+   escreval()
+   escreval(" Olá Senhor(a) ", login)
+   escreval()
+   escreval("--------- Menu --------")
+   repita
+   escreval()
+   escreval("1 - Ver saldo ")
+   escreval("2 - Depositar dinheiro")
+   escreval("3 - Sacar dinheiro")
+   escreval("4 - Ver extrato")
+   escreval("5 - Sair")
+   escreval("escolha aopçao [1] a [5] ")
+   leia(opcao)
+   depositar_dinheiro <- 50
+   sacar_dinheiro <- 20
+   saldo <- depositar_dinheiro - sacar_dinheiro
+
+              escolha opcao
+                      caso 1
+                      limpatela
+                      escreval("----- Saldo em Conta -----")
+                      escreval()
+                      escreval("       R$: ", saldo)
+                      escreval()
+                      escreval("--------------------------")
+                      
+              fimescolha
+
+
+     ate opcao > 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    senao
    
 // validando tentativa
@@ -73,8 +131,7 @@ Inicio
 
 
    fimse
-   ate tentativa > 3
-   
+   ate (tentativa > 3 ) ou (login = login_correto) e ( senha = senha_correta )
    
          se tentativa = 4 entao
          limpatela
