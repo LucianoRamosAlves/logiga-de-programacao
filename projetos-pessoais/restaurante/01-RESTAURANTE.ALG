@@ -81,7 +81,7 @@ Inicio
               escreval(" Quantidades de Hambúrguer ?" )
               leia(quantidade)
               escreval(quantidade," pedido de Hambúrguer Adiconado ")
-              q_hamburguer <- q_hamburguer + quantidade
+              q_hamburguer <- quantidade
               conta <- conta + v_hamburguer * quantidade
               invalid <- 1
 
@@ -89,7 +89,7 @@ Inicio
               escreval(" Quantidades de pizza ?" )
               leia(quantidade)
               escreval(quantidade," pedido Pizza Adiconado ")
-              q_pizza <- q_pizza + quantidade
+              q_pizza <- quantidade
               conta <- conta + v_pizza * quantidade
               invalid <- 1
 
@@ -97,7 +97,7 @@ Inicio
               escreval(" Quantidades de Refrigerante ?" )
               leia(quantidade)
               escreval(quantidade," pedido de Refrigerante Adiconado ")
-              q_refrigerante <- q_refrigerante + quantidade
+              q_refrigerante <- quantidade
               conta <- conta + v_refrigerante * quantidade
               invalid <- 1
 
@@ -105,7 +105,7 @@ Inicio
               escreval(" Quantidades de Suco ?" )
               leia(quantidade)
               escreval(quantidade," pedido de Suco Adiconado ")
-              q_suco <- q_suco + quantidade
+              q_suco <- quantidade
               conta <- conta + v_suco * quantidade
               invalid <- 1
 
@@ -113,14 +113,14 @@ Inicio
               escreval(" Quantidades de Sobremesa ?" )
               leia(quantidade)
               escreval(quantidade," pedido Sobremesa Adiconado ")
-              q_sobremesa <- q_sobremesa + quantidade
+              q_sobremesa <- quantidade
               conta <- conta + v_Sobremesa * quantidade
               invalid <- 1
               
               
               outrocaso
               invalid <- 0
-              escreval(" Opss! opção invalida")
+              escreval(" ****** OPSS! OPÇÃO INVÁLIDA **********")
               escreval(" Refaça a Operação ")
       fimescolha
        ate ( invalid <> 0)
