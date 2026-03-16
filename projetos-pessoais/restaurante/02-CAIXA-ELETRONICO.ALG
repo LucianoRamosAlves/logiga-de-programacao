@@ -15,6 +15,10 @@ q_deposito: inteiro
 q_sacar: inteiro
 V_depositar_dinheiro: real
 V_sacar_dinheiro: real
+t_valor: real
+q_valor: inteiro
+v_valor :real
+
 
 
 Inicio
@@ -51,6 +55,8 @@ Inicio
    
 
    se (login = login_correto) e ( senha = senha_correta ) entao
+   
+   
    escreval("========== CAIXA ELETRONICA =============")
    escreval()
    escreval(" Olá Senhor(a) ", login)
@@ -61,11 +67,12 @@ Inicio
    escreval("1 - Ver saldo ")
    escreval("2 - Depositar dinheiro")
    escreval("3 - Sacar dinheiro")
-   escreval("4 - Ver extrato")
-   escreval("5 - Sair")
-   escreval("escolha aopçao [1] a [5] ")
+   escreval("4 - Transferir")
+   escreval("5 - Ver extrato")
+   escreval("6 - Alterar Senha")
+   escreval("7 - Sair")
+   escreval("escolha aopçao [1] a [7] ")
    leia(opcao)
-   sacar_dinheiro <- 0
 
               escolha opcao
               
@@ -115,6 +122,7 @@ Inicio
                       
                       caso 3
                       limpatela
+                      limpatela
                       escreval("----- Sacar Valor -----")
                       escreval()
                       escreval("Informe o Valor")
@@ -128,6 +136,7 @@ Inicio
                       escreval("_________________")
                       
                       senao
+                      limpatela
                       se ( sacar_dinheiro <= 0 ) entao
                       limpatela
                       escreval("----- ERRO AO SACAR -------")
@@ -135,25 +144,71 @@ Inicio
                       escreval("Opss! Valor invalido")
                       escreval("_________________")
 
+
                       senao
                       V_sacar_dinheiro <- V_sacar_dinheiro + sacar_dinheiro
                       saldo <- saldo - sacar_dinheiro
                       q_sacar <- q_sacar + 1
+                      escreval("^^^^ saque efetuado ^^^^^^")
                       fimse
                       fimse
+                      
+                      
                       caso 4
                       limpatela
-                      escreval("----- Extrato -----")
+                      escreval("----- Transferir Valor -----")
+                      escreval()
+                      escreval("Informe o Valor")
+                      leia(t_valor)
+
+                      se ( t_valor > saldo ) entao
+                      limpatela
+                      escreval("----- ERRO AO TRANSFERIR -------")
+                      escreval()
+                      escreval("Saldo Insuficiente em Conta")
+                      escreval("_________________")
+                      
+                      
+                      senao
+                      limpatela
+                      se ( t_valor <= 0 ) entao
+                      limpatela
+                      escreval("----- ERRO AO TRANFERIR -------")
+                      escreval()
+                      escreval("Opss! Valor invalido")
+                      escreval("_________________")
+
+                      senao
+                      v_valor <- v_valor + t_valor
+                      saldo <- saldo - t_valor
+                      q_valor <- q_valor + 1
+                      escreval("^^^^ transferencia Realizada ^^^^^^")
+                      fimse
+                      fimse
+                      
+                      
+                      caso 5
+                      limpatela
+                      escreval("----------- Extrato -------------")
                       escreval()
                       escreval("--------- DEPOSITOS ------------")
                       escreval(" Quantidade de depositos:",q_deposito )
                       escreval(" total de depositos R$:", V_depositar_dinheiro)
                       escreval()
                       escreval("--------- RETIRADAS ------------")
-                      escreval(" Quantidade de depositos:",q_sacar )
+                      escreval(" Quantidade de saques:",q_sacar )
                       escreval(" total de retiradas R$:-", V_sacar_dinheiro)
+                      escreval()
+                      escreval("--------- TRANSFERENCIAS ------------")
+                      escreval(" Quantidade de transferencias:",q_valor )
+                      escreval(" total de transferencias R$:-", v_valor)
+                      escreval("______________________________________")
+
+
                       
-                      caso 5
+                      
+                      
+                      caso 7
                       limpatela
                       escreval("----- PROGRAMA ENCERRADO -----")
                       escreval()
@@ -162,6 +217,8 @@ Inicio
                       escreval("Sac - 45-451522")
                       fimalgoritmo
                       
+                      
+
                       outrocaso
                       limpatela
                       escreval(" OPÇAO INVALIDA NO MENU " )
@@ -173,7 +230,7 @@ Inicio
               fimescolha
 
 
-     ate (opcao = 5 )
+     ate (opcao = 7 )
 
 
 
