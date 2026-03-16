@@ -280,7 +280,8 @@ Inicio
 
                     caso 4
                   limpatela
-                  escreval(">>>>> Pagamento Dinheiro, R$:", conta)
+                  escreval("--- Pagamento Dinheiro -----")
+                  escreval("R$:", conta)
                   escreval("Valor pago em Dinheiro")
                   leia(valor_dinheiro)
                   troco <- valor_dinheiro - conta
@@ -463,8 +464,11 @@ Inicio
                   caso 3
                   limpatela
                   conta <- 95 * conta / 100
-                  escreval(">>>>> Pagamento Pix, Desconto de 5% <<<<<")
-                  escreval(" Total a pagar R$: ", conta)
+                  escreval("------- Pagamento Pix -------")
+                  escreval()
+                  escreval("R$:", conta)
+                  escreval()
+                  escreval("^^^^^^ PAGAMENTO REALIZADO ^^^^^^")
                   
                   caso 4
                   limpatela
