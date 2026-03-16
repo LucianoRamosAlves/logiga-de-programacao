@@ -9,14 +9,18 @@ login_correto: caractere
 senha_correta: inteiro
 opcao: inteiro
 saldo: real
-depositar_dinheiro: real
+depositar_dinheiro: inteiro
 sacar_dinheiro: real
+q_deposito: inteiro
+q_sacar: inteiro
+V_depositar_dinheiro: real
+V_sacar_dinheiro: real
 
 
 Inicio
 
 // validando usuario
-    login_correto <- "lip"
+    login_correto <- "lulu"
     senha_correta <- 123
 
    // tela de login
@@ -26,8 +30,10 @@ Inicio
 
    repita
    escreval(" por favor ! infomre seu login e senha")
+   escreval()
    escreval(" Digite seu login ")
    leia(login)
+   escreval()
    escreval(" digite sua senha ")
    leia(senha)
    escreval()
@@ -59,11 +65,11 @@ Inicio
    escreval("5 - Sair")
    escreval("escolha aopçao [1] a [5] ")
    leia(opcao)
-   depositar_dinheiro <- 50
-   sacar_dinheiro <- 20
-   saldo <- depositar_dinheiro - sacar_dinheiro
+   sacar_dinheiro <- 0
 
               escolha opcao
+              
+              saldo <- depositar_dinheiro - sacar_dinheiro
                       caso 1
                       limpatela
                       escreval("----- Saldo em Conta -----")
@@ -72,6 +78,71 @@ Inicio
                       escreval()
                       escreval("--------------------------")
                       
+                      caso 2
+                      limpatela
+                      escreval("----- Depositar Valor -----")
+                      escreval()
+                      escreval(" limitado a 10 mil reais ")
+                      escreval()
+                      escreval("Insira o Valor")
+                      leia(depositar_dinheiro)
+                      
+                       se (depositar_dinheiro <= 0) entao
+                       limpatela
+                      escreval("----- ERRO NO DEPOSITO -------")
+                      escreval()
+                      escreval("Opss! Numero invalido")
+                      escreval("_________________")
+                      
+                      senao
+                      limpatela
+                       se (depositar_dinheiro >= 10000) entao
+                       escreval("----- ERRO NO DEPOSITO -------")
+                      escreval()
+                      escreval("Limite Ultrupassado")
+                      escreval()
+                      escreval(" ENTRE EM CONTATO")
+                      escreval("_________________")
+
+                      senao
+                      V_depositar_dinheiro <- V_depositar_dinheiro + depositar_dinheiro
+                      saldo <- saldo + depositar_dinheiro
+                      q_deposito <- q_deposito + 1
+                      escreval("^^^^ Deposito Realizado ^^^^^^")
+                      
+                       fimse
+                       fimse
+                      
+                      caso 3
+                      limpatela
+                      escreval("----- Sacar Valor -----")
+                      escreval()
+                      escreval("Informe o Valor")
+                      leia(sacar_dinheiro)
+                      V_sacar_dinheiro <- V_sacar_dinheiro + sacar_dinheiro
+                      saldo <- saldo - sacar_dinheiro
+                      q_sacar <- q_sacar + 1
+                      
+                      caso 4
+                      limpatela
+                      escreval("----- Extrato -----")
+                      escreval()
+                      escreval("--------- DEPOSITOS ------------")
+                      escreval(" Quantidade de depositos:",q_deposito )
+                      escreval(" total de depositos R$:", V_depositar_dinheiro)
+                      escreval()
+                      escreval("--------- RETIRADAS ------------")
+                      escreval(" Quantidade de depositos:",q_sacar )
+                      escreval(" total de retiradas R$:-", V_sacar_dinheiro)
+                      
+                      caso 5
+                      limpatela
+                      escreval("----- PROGRAMA ENCERRADO -----")
+                      escreval()
+                      escreval("Volte Sempre!")
+                      escreval()
+                      escreval("Sac - 45-451522")
+                      fimalgoritmo
               fimescolha
 
 
