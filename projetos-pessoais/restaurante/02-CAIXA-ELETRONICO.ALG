@@ -119,10 +119,28 @@ Inicio
                       escreval()
                       escreval("Informe o Valor")
                       leia(sacar_dinheiro)
+                      
+                      se ( sacar_dinheiro > saldo ) entao
+                      limpatela
+                      escreval("----- ERRO AO SACAR -------")
+                      escreval()
+                      escreval("Saldo Insuficiente")
+                      escreval("_________________")
+                      
+                      senao
+                      se ( sacar_dinheiro <= 0 ) entao
+                      limpatela
+                      escreval("----- ERRO AO SACAR -------")
+                      escreval()
+                      escreval("Opss! Valor invalido")
+                      escreval("_________________")
+
+                      senao
                       V_sacar_dinheiro <- V_sacar_dinheiro + sacar_dinheiro
                       saldo <- saldo - sacar_dinheiro
                       q_sacar <- q_sacar + 1
-                      
+                      fimse
+                      fimse
                       caso 4
                       limpatela
                       escreval("----- Extrato -----")
@@ -143,10 +161,19 @@ Inicio
                       escreval()
                       escreval("Sac - 45-451522")
                       fimalgoritmo
+                      
+                      outrocaso
+                      limpatela
+                      escreval(" OPÇAO INVALIDA NO MENU " )
+                      escreval()
+                      escreval(" Refarça a Opereção ")
+                      escreval()
+                      escreval("_____________________")
+                      
               fimescolha
 
 
-     ate opcao > 4
+     ate (opcao = 5 )
 
 
 
