@@ -6,38 +6,65 @@ O objetivo é construir uma base sólida para desenvolvimento de software, cobri
 
 ---
 
-## 📂 Estrutura do Repositório
 
-introducao
+# 📚 Estrutura do Repositório
 
-operadores
-│ ├── geral-operadores
-│ ├── operadores-aritimeticos
-│ │ ├── desafios
-│ │ ├── formatacao
-│ │ └── soma
-│ └── operadores-logicos
-│ └── exemplos
+Este repositório contém conteúdos organizados para estudo de lógica de programação.
 
-condicionais
-│ ├── simples
-│ ├── composta
-│ ├── aninhada
-│ └── escolha-caso
+## 📂 introducao
 
-repeticao
-│ ├── laco-enquanto-faca
-│ ├── laco-repita-ate
-│ └── para-ate-faca
+Conteúdos iniciais sobre lógica e fundamentos.
 
-vetores
+---
 
-matrizes
+## 📂 operadores
 
-projetos-pessoais
-│ ├── caixa-eletronico
-│ └── restaurante
+### 📁 geral-operadores
+Conceitos gerais sobre operadores.
 
+### 📁 operadores-aritimeticos
+- 📁 desafios
+- 📁 formatacao
+- 📁 soma
+
+### 📁 operadores-logicos
+- 📁 exemplos
+
+---
+
+## 📂 condicionais
+
+- 📁 simples  
+- 📁 composta  
+- 📁 aninhada  
+- 📁 escolha-caso  
+
+---
+
+## 📂 repeticao
+
+- 📁 laco-enquanto-faca  
+- 📁 laco-repita-ate  
+- 📁 para-ate-faca  
+
+---
+
+## 📂 vetores
+
+Conteúdos relacionados a vetores.
+
+---
+
+## 📂 matrizes
+
+Conteúdos relacionados a matrizes.
+
+---
+
+## 📂 projetos-pessoais
+
+- 📁 caixa-eletronico  
+- 📁 restaurante  
 
 ---
 
